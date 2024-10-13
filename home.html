@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="home-container">
+        <h1 id="welcome-message"></h1>
+    </div>
+
+    <script>
+        // Retrieve the username from sessionStorage
+        const username = sessionStorage.getItem('username');
+        
+        // Display Happy Dasara message with the username
+        if (username) {
+            document.getElementById('welcome-message').textContent = `Happy Dasara, ${username}!`;
+        } else {
+            document.getElementById('welcome-message').textContent = 'You are not logged in.';
+        }
+    </script>
+</body>
+</html>
